@@ -138,7 +138,7 @@ with st.sidebar:
     generate = st.button(
         "🚀 Generate Forecast",
         disabled=not ready,
-        use_container_width=True
+        width="stretch"
     )
 
 # ==========================================================
@@ -430,7 +430,7 @@ with left:
 
     st.plotly_chart(
         revenue_chart,
-        use_container_width=True
+        width="stretch"
     )
 
 with right:
@@ -450,7 +450,7 @@ with right:
 
     st.plotly_chart(
         contribution_chart,
-        use_container_width=True
+        width="stretch"
     )
 
 st.divider()
@@ -481,7 +481,7 @@ with left:
 
     st.plotly_chart(
         roas_chart,
-        use_container_width=True
+        width="stretch"
     )
 
 with right:
@@ -514,7 +514,7 @@ with right:
 
     st.plotly_chart(
         interval_chart,
-        use_container_width=True
+        width="stretch"
     )
 
 st.divider()
@@ -529,7 +529,7 @@ table = forecast.copy().round(2)
 
 st.dataframe(
     table,
-    use_container_width=True,
+    width="stretch",
     hide_index=True
 )
 st.divider()
@@ -693,7 +693,7 @@ else:
 
 st.divider()
 
-st.divider()
+
 
 # ==========================================================
 # FORECAST EXPLANATION
@@ -732,7 +732,7 @@ P90 = Optimistic Forecast
 )
 
 st.divider()
-st.divider()
+
 
 # ==========================================================
 # OPERATIONAL RISK ASSESSMENT
@@ -934,7 +934,7 @@ c1.download_button(
     csv,
     file_name="predictions.csv",
     mime="text/csv",
-    use_container_width=True
+    width="stretch"
 )
 
 report = f"""
@@ -999,7 +999,7 @@ c2.download_button(
     report,
     file_name="forecast_report.txt",
     mime="text/plain",
-    use_container_width=True
+    width="stretch"
 )
 
 st.caption(
